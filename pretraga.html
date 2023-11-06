@@ -7,7 +7,7 @@
         function reset(target){
             let list = document.getElementById('lista').getElementsByTagName("li")
             for (i = 0; i < list.length; i++)
-                list[i].style.display = "block"
+                list[i].style.color = "black"
             target.value = ""
         }
         function filter(target){
@@ -17,8 +17,8 @@
             for (i = 0; i < list.length; i++)
             {
                 // console.log(list[i])
-                if (!list[i].innerHTML.includes(term)){
-                    list[i].style.display = 'none'
+                if (list[i].innerHTML.includes(term)){
+                    list[i].style.color = 'red'
                 }
             }
 
